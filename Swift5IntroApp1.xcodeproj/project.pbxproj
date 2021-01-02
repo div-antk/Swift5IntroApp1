@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		3B7713B325A042D400638D78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713B125A042D400638D78 /* Main.storyboard */; };
 		3B7713B525A042D700638D78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713B425A042D700638D78 /* Assets.xcassets */; };
 		3B7713B825A042D700638D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713B625A042D700638D78 /* LaunchScreen.storyboard */; };
+		3B7713CA25A0804B00638D78 /* 5.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713C525A0804A00638D78 /* 5.json */; };
+		3B7713CB25A0804B00638D78 /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713C625A0804A00638D78 /* 1.json */; };
+		3B7713CC25A0804B00638D78 /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713C725A0804B00638D78 /* 3.json */; };
+		3B7713CD25A0804B00638D78 /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713C825A0804B00638D78 /* 2.json */; };
+		3B7713CE25A0804B00638D78 /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713C925A0804B00638D78 /* 4.json */; };
+		3B7713D125A0805500638D78 /* 6.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713D025A0805500638D78 /* 6.json */; };
 		A62FB2F0A24E268888FD40CC /* Pods_Swift5IntroApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D26DE3DCE5014C14243F79F /* Pods_Swift5IntroApp1.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +31,12 @@
 		3B7713B425A042D700638D78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B7713B725A042D700638D78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B7713B925A042D700638D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B7713C525A0804A00638D78 /* 5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 5.json; sourceTree = "<group>"; };
+		3B7713C625A0804A00638D78 /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1.json; sourceTree = "<group>"; };
+		3B7713C725A0804B00638D78 /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3.json; sourceTree = "<group>"; };
+		3B7713C825A0804B00638D78 /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2.json; sourceTree = "<group>"; };
+		3B7713C925A0804B00638D78 /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 4.json; sourceTree = "<group>"; };
+		3B7713D025A0805500638D78 /* 6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 6.json; sourceTree = "<group>"; };
 		4D9E7A21840D0AB45EF7ECDD /* Pods-Swift5IntroApp1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5IntroApp1.debug.xcconfig"; path = "Target Support Files/Pods-Swift5IntroApp1/Pods-Swift5IntroApp1.debug.xcconfig"; sourceTree = "<group>"; };
 		6D26DE3DCE5014C14243F79F /* Pods_Swift5IntroApp1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5IntroApp1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4D58D0652A59B814A863B8 /* Pods-Swift5IntroApp1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5IntroApp1.release.xcconfig"; path = "Target Support Files/Pods-Swift5IntroApp1/Pods-Swift5IntroApp1.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,15 +75,45 @@
 		3B7713AA25A042D400638D78 /* Swift5IntroApp1 */ = {
 			isa = PBXGroup;
 			children = (
+				3B7713C225A07FA900638D78 /* Model */,
+				3B7713C125A07F9F00638D78 /* View */,
+				3B7713C325A07FBC00638D78 /* Controller */,
+				3B7713B925A042D700638D78 /* Info.plist */,
+				3B7713C625A0804A00638D78 /* 1.json */,
+				3B7713C825A0804B00638D78 /* 2.json */,
+				3B7713C725A0804B00638D78 /* 3.json */,
+				3B7713C925A0804B00638D78 /* 4.json */,
+				3B7713C525A0804A00638D78 /* 5.json */,
+				3B7713D025A0805500638D78 /* 6.json */,
+			);
+			path = Swift5IntroApp1;
+			sourceTree = "<group>";
+		};
+		3B7713C125A07F9F00638D78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B7713B425A042D700638D78 /* Assets.xcassets */,
+				3B7713B625A042D700638D78 /* LaunchScreen.storyboard */,
+				3B7713B125A042D400638D78 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B7713C225A07FA900638D78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B7713C325A07FBC00638D78 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				3B7713AB25A042D400638D78 /* AppDelegate.swift */,
 				3B7713AD25A042D400638D78 /* SceneDelegate.swift */,
 				3B7713AF25A042D400638D78 /* ViewController.swift */,
-				3B7713B125A042D400638D78 /* Main.storyboard */,
-				3B7713B425A042D700638D78 /* Assets.xcassets */,
-				3B7713B625A042D700638D78 /* LaunchScreen.storyboard */,
-				3B7713B925A042D700638D78 /* Info.plist */,
 			);
-			path = Swift5IntroApp1;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		477371A3F7FF4D53BB3B0292 /* Pods */ = {
@@ -80,7 +122,6 @@
 				4D9E7A21840D0AB45EF7ECDD /* Pods-Swift5IntroApp1.debug.xcconfig */,
 				AC4D58D0652A59B814A863B8 /* Pods-Swift5IntroApp1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,9 +192,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7713D125A0805500638D78 /* 6.json in Resources */,
+				3B7713CB25A0804B00638D78 /* 1.json in Resources */,
 				3B7713B825A042D700638D78 /* LaunchScreen.storyboard in Resources */,
+				3B7713CE25A0804B00638D78 /* 4.json in Resources */,
 				3B7713B525A042D700638D78 /* Assets.xcassets in Resources */,
+				3B7713CC25A0804B00638D78 /* 3.json in Resources */,
+				3B7713CD25A0804B00638D78 /* 2.json in Resources */,
 				3B7713B325A042D400638D78 /* Main.storyboard in Resources */,
+				3B7713CA25A0804B00638D78 /* 5.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
