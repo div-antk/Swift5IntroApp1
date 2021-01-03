@@ -8,17 +8,20 @@
 import UIKit
 import Lottie
 
-class IntroViewController: UIViewController {
+class IntroViewController: UIViewController, UIScrollViewDelegate {
 
   @IBOutlet weak var scrollView: UIScrollView!
   
   var onboardArray = ["1","2","3","4","5"]
-  var onboardString = ["(´・ω・｀)", "（´ω｀）", "⊂( ・∇・)⊃", "(`Д´)", "( ´∀｀)", ]
+  var onboardStringArray = ["(´・ω・｀)", "（´ω｀）", "⊂( ・∇・)⊃", "(`Д´)", "( ´∀｀)", ]
   
   override func viewDidLoad() {
         super.viewDidLoad()
 
     scrollView.isPagingEnabled = true
+    setUpScroll()
+    
+    
   }
     
   // ナビゲーションバーを消す
@@ -29,8 +32,29 @@ class IntroViewController: UIViewController {
     
   }
   
+  // スクロール
   func setUpScroll() {
     
+    scrollView.delegate = self
+    
+    // 可動領域
+    // ページングしたいページの数だけ横幅を乗算する
+    scrollView.contentSize = CGSize(width: view.frame.size.width * 5, height: scrollView.frame.size.height)
+    
+    for i in 0...4 {
+      
+      let onboardLabel = UILabel(frame: CGRect(
+                                  x: CGFloat(i) * view.frame.size.width,
+                                  // 画面を3分割して下に持ってくる
+                                  y: view.frame.size.height / 3,
+                                  width: scrollView.frame.size.width,
+                                  height: scrollView.frame.size.height)
+      )
+      onboardLabel.font = UIFont.boldSystemFont(ofSize: 15.0)
+      onboardLabel.textAlignment = .center
+      onboardLabel.text = onboardStringArray[i]
+      scrollView.addSubview(onboardLabel)
+    }
   }
 
     /*
