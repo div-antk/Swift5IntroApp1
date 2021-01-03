@@ -10,12 +10,28 @@ import Lottie
 
 class IntroViewController: UIViewController {
 
-    override func viewDidLoad() {
+  @IBOutlet weak var scrollView: UIScrollView!
+  
+  var onboardArray = ["1","2","3","4","5"]
+  var onboardString = ["(´・ω・｀)", "（´ω｀）", "⊂( ・∇・)⊃", "(`Д´)", "( ´∀｀)", ]
+  
+  override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+    scrollView.isPagingEnabled = true
+  }
     
+  // ナビゲーションバーを消す
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    self.navigationController?.isNavigationBarHidden = true
+    
+  }
+  
+  func setUpScroll() {
+    
+  }
 
     /*
     // MARK: - Navigation
