@@ -13,7 +13,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
   @IBOutlet weak var scrollView: UIScrollView!
   
   var onboardArray = ["1","2","3","4","5"]
-  var onboardStringArray = ["(´・ω・｀)", "（´ω｀）", "⊂( ・∇・)⊃", "(`Д´)", "( ´∀｀)", ]
+  var onboardStringArray = ["(´・ω・｀)", "（´ω｀）", "⊂( ・∇・)⊃", "(`Д´)", "( ´∀｀)",]
   
   override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +35,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
       animationView.contentMode = .scaleAspectFit
       animationView.loopMode = .loop
       animationView.play()
-      animationView.addSubview(animationView)
+      scrollView.addSubview(animationView)
     }
-    
   }
     
   // ナビゲーションバーを消す
