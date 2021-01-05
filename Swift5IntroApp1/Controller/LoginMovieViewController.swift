@@ -30,13 +30,23 @@ class LoginMovieViewController: UIViewController {
       
       playerLayer.videoGravity = .resizeAspectFill
       
-      // 0 を指定すると無限ループ
+      // 下のリピート再生のための処理
       playerLayer.repeatCount = 0
       
       // 上に表示するボタンのために -1 する
       playerLayer.zPosition = -1
       
       view.layer.insertSublayer(playerLayer, at: 0)
+      
+      // リピート再生の処理
+      NotificationCenter.default.addObserver(
+        forName: .AVPlayerItemDidPlayToEndTime,
+        object: player.currentItem,
+        queue: .main) { (_) in
+        // プレーヤーの0秒に移動する
+        self.player.seek(to: .zero)
+        self.player.play()
+      }
     }
   
   override func viewWillAppear(_ animated: Bool) {
