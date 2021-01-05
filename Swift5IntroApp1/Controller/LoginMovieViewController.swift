@@ -10,12 +10,35 @@ import AVFoundation
 
 class LoginMovieViewController: UIViewController {
 
+  var player = AVPlayer()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      let path = Bundle.main.path(forResource: "ファイル名", ofType: "拡張子")
+      player = AVPlayer(url: URL(fileURLWithPath: path!))
+      
+      // AVPlayer用のレイヤーを生成
+      let playerLayer = AVPlayerLayer(player: player)
+        
+      playerLayer.frame = CGRect(
+        x: 0,
+        y: 0,
+        width: view.frame.size.width,
+        height: view.frame.size.height
+      )
+      
+      playerLayer.videoGravity = .resizeAspectFill
+      
+      // 0 を指定すると無限ループ
+      playerLayer.repeatCount = 0
+      
+      // 上に表示するボタンのために -1 する
+      playerLayer.zPosition = -1
+      
+      view.layer.insertSublayer(playerLayer, at: 0)
     }
-    
+  
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.navigationController?.isNavigationBarHidden = true
