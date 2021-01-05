@@ -15,7 +15,7 @@ class LoginMovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      let path = Bundle.main.path(forResource: "ファイル名", ofType: "拡張子")
+      let path = Bundle.main.path(forResource: "start", ofType: "mov")
       player = AVPlayer(url: URL(fileURLWithPath: path!))
       
       // AVPlayer用のレイヤーを生成
@@ -47,14 +47,20 @@ class LoginMovieViewController: UIViewController {
         self.player.seek(to: .zero)
         self.player.play()
       }
+      self.player.play()
     }
   
+  // ナビゲーションバーの表示を消す
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.navigationController?.isNavigationBarHidden = true
   }
 
-    /*
+  @IBAction func login(_ sender: Any) {
+    // 動画の再生を止める
+    player.pause()
+  }
+  /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
