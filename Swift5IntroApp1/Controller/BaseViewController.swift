@@ -16,17 +16,26 @@ class BaseViewController: SegementSlideDefaultViewController {
     super.viewDidLoad()
     
     reloadData()
+    // タブの初期位置
     defaultSelectedIndex = 0
-    // Do any additional setup after loading the view.
   }
   
+  // ヘッダーの処理
   override func segementSlideHeaderView() -> UIView? {
     let headerView = UIImageView()
+    
+    // タップを有効にする
     headerView.isUserInteractionEnabled = true
+    
+    // 画像をどこに合わせるか
     headerView.contentMode = .scaleToFill
+    
+    // ヘッダーに画像をつける
     headerView.image = UIImage(named: "header")
+    
     headerView.translatesAutoresizingMaskIntoConstraints = false
     
+    // ヘッダーの高さ
     let headerHeight: CGFloat
     
     if #available(iOS 11.0, *) {
