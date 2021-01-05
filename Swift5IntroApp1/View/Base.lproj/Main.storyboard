@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="873.91304347826099" y="87.723214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Movie View Controller-->
         <scene sceneID="aE8-kJ-CyU">
             <objects>
-                <viewController id="gE5-9y-AUg" sceneMemberID="viewController">
+                <viewController id="gE5-9y-AUg" customClass="LoginMovieViewController" customModule="Swift5IntroApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAz-gy-VDo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
