@@ -12,6 +12,12 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
   
   // XMLParserのインスタンスを作成する
   var parser = XMLParser()
+
+  // RSSのパース内の現在の要素名
+  var currentElementName:String!
+  
+  // ModelからNewsItems型の配列を作る
+  var newsItems = [NewsItems]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,7 +51,13 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
   
   override func numberOfSections(in tableView: UITableView) -> Int {
     // #warning Incomplete implementation, return the number of sections
-    return 1
+    // 配列のカウントを返す
+    return newsItems.count
+  }
+  
+  // 画面を5分割した高さ
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return view.frame.size.height/5
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,15 +65,19 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
     return 1
   }
   
-  /*
-   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-   
-   // Configure the cell...
-   
-   return cell
-   }
-   */
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    // スタイル
+    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+    
+    // 後ろのUIImageViewが見えるようになる
+    cell.backgroundColor = .clear
+    
+    // パースが完了して入ってきた要素をnewsItemsに入れている
+    let newsItems = self.newsItems[indexPath.row]
+    
+    return cell
+  }
   
   /*
    // Override to support conditional editing of the table view.
