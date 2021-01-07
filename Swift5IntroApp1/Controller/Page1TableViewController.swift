@@ -10,7 +10,8 @@ import SegementSlide
 
 class Page1TableViewController: UITableViewController, SegementSlideContentScrollViewDelegate, XMLParserDelegate {
   
-  
+  // XMLParserのインスタンスを作成する
+  var parser = XMLParser()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,6 +30,11 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
     self.tableView.backgroundView = imageView
     
     // XMLパース
+    let urlString = "https://news.yahoo.co.jp/pickup/rss.xml"
+    let url:URL = URL(string: urlString)!
+    parser = XMLParser(contentsOf: url)!
+    parser.delegate = self
+    parser.parse()
   }
   
   @objc var scrollView: UIScrollView {
