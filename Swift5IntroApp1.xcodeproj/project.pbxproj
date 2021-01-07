@@ -21,6 +21,7 @@
 		3B7713CE25A0804B00638D78 /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B7713C925A0804B00638D78 /* 4.json */; };
 		3B7713D925A1F6E800638D78 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7713D825A1F6E800638D78 /* IntroViewController.swift */; };
 		3BA564DA25A4871800D376B3 /* LoginMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA564D925A4871800D376B3 /* LoginMovieViewController.swift */; };
+		3BB1532625A73855008456D1 /* Page1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB1532525A73855008456D1 /* Page1TableViewController.swift */; };
 		FF1C03A24E354F071CB49DB6 /* Pods_Swift5IntroApp1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF1FECE92529CDBE6C87932 /* Pods_Swift5IntroApp1.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		3B7713C925A0804B00638D78 /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 4.json; sourceTree = "<group>"; };
 		3B7713D825A1F6E800638D78 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		3BA564D925A4871800D376B3 /* LoginMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMovieViewController.swift; sourceTree = "<group>"; };
+		3BB1532525A73855008456D1 /* Page1TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1TableViewController.swift; sourceTree = "<group>"; };
 		5AF1FECE92529CDBE6C87932 /* Pods_Swift5IntroApp1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5IntroApp1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		955FB6BDDD73D07F8A1ECF6B /* Pods-Swift5IntroApp1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5IntroApp1.release.xcconfig"; path = "Target Support Files/Pods-Swift5IntroApp1/Pods-Swift5IntroApp1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3B7713AB25A042D400638D78 /* AppDelegate.swift */,
+				3BB1532525A73855008456D1 /* Page1TableViewController.swift */,
 				3B7713D825A1F6E800638D78 /* IntroViewController.swift */,
 				3B4C391625A48F9F00175B23 /* BaseViewController.swift */,
 				3B7713AD25A042D400638D78 /* SceneDelegate.swift */,
@@ -261,6 +264,7 @@
 			files = (
 				3B4C391725A48F9F00175B23 /* BaseViewController.swift in Sources */,
 				3B7713D925A1F6E800638D78 /* IntroViewController.swift in Sources */,
+				3BB1532625A73855008456D1 /* Page1TableViewController.swift in Sources */,
 				3BA564DA25A4871800D376B3 /* LoginMovieViewController.swift in Sources */,
 				3B7713AC25A042D400638D78 /* AppDelegate.swift in Sources */,
 				3B7713AE25A042D400638D78 /* SceneDelegate.swift in Sources */,

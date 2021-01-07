@@ -48,6 +48,10 @@ class BaseViewController: SegementSlideDefaultViewController {
     return headerView
   }
   
+  override var titlesInSwitcher: [String] {
+    return ["TOP", "AbemaNews", "Yahoo!", "IT", "Buzz", "CNN"]
+  }
+    
   override func segementSlideContentViewController(at index: Int) -> SegementSlideContentScrollViewDelegate? {
     switch index {
     case 0:
