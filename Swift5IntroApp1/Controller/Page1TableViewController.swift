@@ -17,6 +17,18 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
     
     tableView.backgroundColor = .clear
     
+    // 画像をtableViewの下に置く
+    let image = UIImage(named: "0")
+    let imageView = UIImageView(frame: CGRect(
+                                  x: 0,
+                                  y: 0,
+                                  width: self.tableView.frame.size.width,
+                                  height: self.tableView.frame.size.height
+    ))
+    imageView.image = image
+    self.tableView.backgroundView = imageView
+    
+    // XMLパース
   }
   
   @objc var scrollView: UIScrollView {
