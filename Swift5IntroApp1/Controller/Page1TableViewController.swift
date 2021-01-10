@@ -74,10 +74,18 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
     cell.backgroundColor = .clear
     
     // パースが完了して入ってきた要素をnewsItemsに入れている
-    let newsItems = self.newsItems[indexPath.row]
+    let newsItem = self.newsItems[indexPath.row]
+    cell.textLabel?.text = newsItem.title
+    cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15.0)
+    cell.textLabel?.textColor = .white
+    cell.textLabel?.numberOfLines = 3
+    
+    cell.detailTextLabel?.text = newsItem.url
+    cell.detailTextLabel?.textColor = .white
     
     return cell
   }
+  
   
   /*
    // Override to support conditional editing of the table view.
