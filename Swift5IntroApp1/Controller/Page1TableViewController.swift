@@ -86,6 +86,17 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
     return cell
   }
   
+  func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+    
+    currentElementName = nil
+    
+    if elementName == "item" {
+      self.newsItems.append(NewsItems())
+    
+    } else {
+      currentElementName = elementName
+    }
+  }
   
   /*
    // Override to support conditional editing of the table view.
