@@ -86,9 +86,11 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
     return cell
   }
   
+  // xml形式で書かれたものをひとつひとつ見ていき、didStartElementでパース（解析）を返す
   func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
     
     currentElementName = nil
+    
     
     if elementName == "item" {
       self.newsItems.append(NewsItems())
@@ -98,6 +100,22 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
     }
   }
   
+  func parser(_ parser: XMLParser, foundCharacters string: String) {
+    if self.newsItems.count > 0 {
+      let lastItem = self.newsItems[self.newsItems.count - 1]
+    
+      switch self.currentElementName {
+      case "title":
+        lastItem.title = string
+      case "url":
+        lastItem.url = string
+      case "pubDate":
+        lastItem.pubDate = string
+      default:
+        break
+      }
+    }
+  }
   /*
    // Override to support conditional editing of the table view.
    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
