@@ -102,6 +102,8 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
   
   func parser(_ parser: XMLParser, foundCharacters string: String) {
     if self.newsItems.count > 0 {
+      
+      
       let lastItem = self.newsItems[self.newsItems.count - 1]
     
       switch self.currentElementName {
@@ -115,6 +117,20 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
         break
       }
     }
+  }
+  
+  // <title></title>などの終わりタグを発見した場合
+  func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    self.currentElementName = nil
+  }
+  
+  // セルをすべてアップデートする
+  func parserDidEndDocument(_ parser: XMLParser) {
+    self.tableView.reloadData()
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //webViewControllerにurlを渡して表示したい
   }
   /*
    // Override to support conditional editing of the table view.
