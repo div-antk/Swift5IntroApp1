@@ -55,19 +55,19 @@ class BaseViewController: SegementSlideDefaultViewController {
   override func segementSlideContentViewController(at index: Int) -> SegementSlideContentScrollViewDelegate? {
     switch index {
     case 0:
-      return Page1ViewController()
+      return Page1TableViewController()
     case 1:
-      return Page2ViewController()
+      return Page2TableViewController()
     case 2:
-      return Page3ViewController()
+      return Page3TableViewController()
     case 3:
-      return Page4ViewController()
+      return Page4TableViewController()
     case 4:
-      return Page5ViewController()
+      return Page5TableViewController()
     case 5:
-      return Page6ViewController()
+      return Page6TableViewController()
     default:
-      return Page1ViewController()
+      return Page1TableViewController()
     }
   }
   // ナビゲーションバーの表示を消す
