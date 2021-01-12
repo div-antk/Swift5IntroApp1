@@ -8,7 +8,7 @@
 import UIKit
 import SegementSlide
 
-class Page1TableViewController: UITableViewController, SegementSlideContentScrollViewDelegate, XMLParserDelegate {
+class Page3TableViewController: UITableViewController, SegementSlideContentScrollViewDelegate, XMLParserDelegate {
   
   // XMLParserのインスタンスを作成する
   var parser = XMLParser()
@@ -25,7 +25,7 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
     tableView.backgroundColor = .clear
     
     // 画像をtableViewの下に置く
-    let image = UIImage(named: "0")
+    let image = UIImage(named: "2")
     let imageView = UIImageView(frame: CGRect(
                                   x: 0,
                                   y: 0,
@@ -189,3 +189,4 @@ class Page1TableViewController: UITableViewController, SegementSlideContentScrol
    */
   
 }
+
