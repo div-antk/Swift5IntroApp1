@@ -36,7 +36,7 @@ class Page6TableViewController: UITableViewController, SegementSlideContentScrol
     self.tableView.backgroundView = imageView
     
     // XMLパース
-    let urlString = "https://news.yahoo.co.jp/pickup/rss.xml"
+    let urlString = "https://news.yahoo.co.jp/rss/topics/top-picks.xml"
     let url:URL = URL(string: urlString)!
     parser = XMLParser(contentsOf: url)!
     parser.delegate = self
